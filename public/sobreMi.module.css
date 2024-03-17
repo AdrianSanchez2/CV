@@ -1,0 +1,15 @@
+.sobreMi_page {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    align-items: center;
+    gap: 5rem;
+}
+.listItem {
+    transition: 0.2s ease-in-out all;
+    margin: 1rem;
+}
+.listItem:hover {
+    text-decoration: underline;
+}
+  

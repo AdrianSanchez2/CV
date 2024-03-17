@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import layoutStyles from "../public/layout.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +12,48 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={layoutStyles.body}>
+        <section className={layoutStyles.nav}>
+          <ul className={layoutStyles.list}>
+            <li className={layoutStyles.list_item}>
+              <Link className={layoutStyles.link} href={"/"}>
+                Inicio
+                <span></span>
+                <span></span>
+              </Link>
+            </li>
+            <li className={layoutStyles.list_item}>
+              <Link className={layoutStyles.link} href={"/mis_proyectos"}>
+                Mis Proyectos
+                <span></span>
+                <span></span>
+              </Link>
+            </li>
+            <li className={layoutStyles.list_item}>
+              <Link className={layoutStyles.link} href={"/sobre_mi"}>
+                Sobre Mi
+                <span></span>
+                <span></span>
+              </Link>
+            </li>
+          </ul>
+        </section>
+
+        {children}
+      </body>
     </html>
   );
 }

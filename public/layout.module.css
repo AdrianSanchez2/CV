@@ -1,0 +1,68 @@
+.body {
+  display: flex;
+  background-color: rgb(37, 32, 51);
+  color: aliceblue;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  font-family: "Catamaran", sans-serif;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+.list_item {
+  margin: 3rem 0 3rem 0;
+  display: flex;
+}
+.link {
+  font-size: 2rem;
+  border: 1px solid aliceblue;
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link:hover {
+  background-color: #001a2b;
+  box-shadow: 0 0 20px #17a2ff;
+  border-color: #17a2ff;
+}
+.link span:nth-child(n) {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+  transition: all 0.2s ease-in-out; 
+}
+.link span:nth-child(1) {
+  right: 10%;
+  top: -7px;
+  background-color: aliceblue;
+}
+.link span:nth-child(2) {
+  left: 10%;
+  bottom: -7px;
+  background-color: rgb(37, 32, 51);
+}
+.link:hover span:nth-child(1) {
+  right: 80%;
+  transform: rotate(90deg);
+  color: #17a2ff;
+  background-color: #17a2ff;
+}
+.link:hover span:nth-child(2) {
+  left: 80%;
+  transform: rotate(90deg);
+  color: #17a2ff;
+} 
